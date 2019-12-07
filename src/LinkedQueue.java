@@ -16,15 +16,6 @@ public class LinkedQueue implements IntQueue {
     }
 
     public int peek() {
-        if (size == 0) {
-            return 0;
-        }
-        int result = firstInQueue.getValue();
-        firstInQueue = firstInQueue.getNext();
-        if (firstInQueue == null) {
-            lastInQueue = null;
-        }
-        size--;
-        return result;
+        return firstInQueue.getValue();
     }
 }
